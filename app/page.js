@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import supabase from '../lib/supabaseClient';   // now matches default export
-import '../styles/HomePage.css';               // lowercase folder name
+import { useEffect, useState } from "react";
+import supabase from "../lib/supabaseClient";   // default export
+import "../styles/HomePage.css";               // lowercase folder name
 import Image from "next/image";
 
 export default function HomePage() {
@@ -10,7 +10,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchProperties = async () => {
-      const { data, error } = await supabase.from('properties').select('*');
+      const { data, error } = await supabase.from("properties").select("*");
       if (error) {
         console.error("Supabase error:", error);
       } else {

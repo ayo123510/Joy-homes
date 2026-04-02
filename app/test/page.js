@@ -1,4 +1,4 @@
-import { supabase } from '../../lib/supabaseClient';
+import  supabase  from '../../lib/supabaseClient';
 
 export default async function TestPage() {
   const { data, error } = await supabase.from('properties').select('*').limit(1);
