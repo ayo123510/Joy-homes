@@ -1,0 +1,51 @@
+
+
+/* Your login card */
+.auth-card {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  height: 85vh;
+  margin-top: 60px;
+  text-align: center;
+}
+
+
+.auth-card h2 {
+  margin-bottom: 1.5rem;
+  color: #004080;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-card button:hover {
+  background: #003060;
+}
+
+.switch-link {
+  margin-top: 1rem;
+  display: block;
+  color: #004080;
+  text-decoration: none;
+}

@@ -1,0 +1,89 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* allows absolute centering */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;              /* taller navbar */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+  display: flex;
+  align-items: center;        /* vertical centering */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;                /* stretch across header */
+  padding: 0 2rem;            /* horizontal spacing only */
+  position: relative;         /* allows brand centering */
+}
+
+.brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.brand h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Left nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.auth-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.auth-links li a {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #004080;   /* Joy Homes blue */
+  border-radius: 4px;
+  color: #004080;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.auth-links li a:hover {
+  background: #004080;
+  color: #fff;
+}
+
