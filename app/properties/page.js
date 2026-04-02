@@ -1,6 +1,6 @@
 
 // app/properties/page.js
-import { supabase } from '../../lib/supabaseClient';
+import  supabase from '../../lib/supabaseClient';
 import PropertyCard from '../../components/PropertyCard';
 
 export default async function PropertiesPage() {
