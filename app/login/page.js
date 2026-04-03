@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import supabase from "../../lib/supabaseClient";   // ✅ default import
+import supabase from "../../lib/supabaseClient";  
 import "../../styles/auth.css";
 import "../../styles/login.css";
 
@@ -24,26 +24,28 @@ export default function LoginPage() {
   };
 
   return (
-    <main>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-      </form>
-      <p>
-        Don’t have an account? <Link href="/register">Register</Link>
-      </p>
-    </main>
+    <div className="auth-container">
+      <div className="auth-card">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p className="switch-link">
+          Don’t have an account? <Link href="/register">Register</Link>
+        </p>
+      </div>
+    </div>
   );
 }

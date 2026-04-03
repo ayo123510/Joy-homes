@@ -6,9 +6,9 @@
   padding: 2rem 3rem;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  width: 100%;
+  width: 80%;
   max-width: 400px;
-  height: 85vh;
+  height: 70vh;
   margin-top: 60px;
   text-align: center;
 }
