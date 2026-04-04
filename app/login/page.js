@@ -9,8 +9,6 @@ import "../../styles/login.css";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [success, setSuccess] = useState(""); // success message
-  const [error, setError] = useState("");     // error message
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -19,15 +17,9 @@ export default function LoginPage() {
       password,
     });
     if (error) {
-      setError(error.message);
-      setSuccess("");
+      console.error("Login error:", error.message);
     } else {
-      setSuccess("Login successful!");
-      setError("");
-      // optionally redirect after a short delay
-      setTimeout(() => {
-        window.location.href = "/dashboard";
-      }, 1500);
+      console.log("Login success:", data);
     }
   };
 
@@ -50,8 +42,6 @@ export default function LoginPage() {
           />
           <button type="submit">Login</button>
         </form>
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        {success && <p style={{ color: "green" }}>{success}</p>}
         <p className="switch-link">
           Don’t have an account? <Link href="/register">Register</Link>
         </p>
