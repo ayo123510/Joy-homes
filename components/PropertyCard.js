@@ -1,21 +1,22 @@
 
 
-// components/PropertyList.js
-import PropertyCard from './PropertyCard';
-import '../styles/propertyCard.css';
+// components/PropertyCard.js
+import styles from "../styles/propertyCard.module.css";
 
-
-export default function PropertyList({ properties }) {
-  if (!properties || properties.length === 0) {
-    return <p>No properties available.</p>;
-  }
-
+export default function PropertyCard({ property }) {
   return (
-    <div className="propertyContainer">
-      {properties.map((property) => (
-        <PropertyCard key={property.id} property={property} />
-      ))}
+    <div className={styles.card}>
+      <img src={property.image_url} alt={property.title} />
+      <h2>{property.title}</h2>
+      <p>
+        {property.beds} Beds • {property.baths} Baths • {property.sqft} sqft
+      </p>
+      <p>${property.price}</p>
     </div>
   );
 }
+
+
+
+
 

@@ -20,6 +20,8 @@ export default function HomePage() {
     fetchProperties();
   }, []);
 
+  
+
   return (
     <main>
       <section className="hero-section">
