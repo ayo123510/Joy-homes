@@ -11,6 +11,7 @@ export default async function PropertiesPage() {
     cache: "no-store",
   });
   const properties = await res.json();
+  console.log('properties', properties);
 
   if (!properties || properties.length === 0) {
     return <div>No property available</div>;
