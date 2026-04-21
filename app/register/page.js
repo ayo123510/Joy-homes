@@ -5,12 +5,12 @@ import supabase from "../../lib/supabaseClient";
 import "../../styles/auth.css";
 import "../../styles/register.css";
 
-
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [message, setMessage] = useState(""); // feedback state
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -22,16 +22,17 @@ export default function RegisterPage() {
     if (error) {
       setError(error.message);
     } else {
-      // redirect or show success
-      window.location.href = "/";
+      setMessage("Registration successful! Redirecting...");
+      setError("");
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1500);
     }
   };
 
   return (
     <div className="register-container">
-      <div className="register-left">
-        {/* <h2>Find your dream home with Joy Homes</h2> */}
-      </div>
+      <div className="register-left"></div>
       <div className="register-right">
         <div className="register-card">
           <img src="/assets/logo.png" alt="Joy Homes Logo" className="logo" />
@@ -43,6 +44,7 @@ export default function RegisterPage() {
             <button type="submit">Register</button>
           </form>
           {error && <p style={{color:"red"}}>{error}</p>}
+          {message && <p className="feedback">{message}</p>}
           <Link href="/login" className="switch-link">
             Already have an account? Login
           </Link>

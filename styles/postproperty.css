@@ -1,0 +1,199 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;              /* space between form and drop list */
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f4ff, #d9e6ff);
+}
+
+/* Shared card styling */
+.auth-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  height: 500px;          /* fixed height for both cards */
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card input,
+.auth-card textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.feedback {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: green;
+}
+
+/* Upload box styling */
+.upload-box {
+  border: 2px dashed #007bff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.upload-box:hover {
+  background-color: #f8f9fa;
+}
+
+.upload-label {
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  color: #007bff;
+}
+
+.preview-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.preview-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Spinner overlay */
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.6);
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.post-btn {
+  flex: 1;
+  padding: 0.75rem;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-btn:hover {
+  background: #218838;
+}
+
+.drop-btn {
+  flex: 1;
+  padding: 0.75rem;
+  background: #e74c3c; /* red */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drop-btn:hover {
+  background: #c0392b;
+}
+
+/* Property list styling */
+.property-scroll {
+  height: 500px;          /* same height as form card */
+  overflow-y: auto;       /* scroll inside */
+}
+
+.property-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.property-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+  background: #f9f9f9;
+}
+
+.property-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.property-image {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+}
+
+/* Inline modal styling inside property card */
+.inline-modal {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: slideDown 0.3s ease;
+}
+
+.inline-modal p {
+  margin-bottom: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.modal-actions button:first-child {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.modal-actions button:last-child {
+  background: #ccc;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

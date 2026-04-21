@@ -49,3 +49,10 @@
   color: #004080;
   text-decoration: none;
 }
+
+.feedback {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: green;
+}
+

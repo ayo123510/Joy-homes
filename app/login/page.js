@@ -9,6 +9,7 @@ import "../../styles/login.css";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState(""); // feedback state
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -17,9 +18,13 @@ export default function LoginPage() {
       password,
     });
     if (error) {
-      console.error("Login error:", error.message);
+      setMessage(`Login failed: ${error.message}`);
     } else {
-      console.log("Login success:", data);
+      setMessage("Login successful! Redirecting...");
+      // optional redirect
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 500);
     }
   };
 
@@ -42,6 +47,7 @@ export default function LoginPage() {
           />
           <button type="submit">Login</button>
         </form>
+        {message && <p className="feedback">{message}</p>}
         <p className="switch-link">
           Don’t have an account? <Link href="/register">Register</Link>
         </p>

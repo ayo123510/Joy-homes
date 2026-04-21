@@ -1,7 +1,9 @@
 
 
-import Link from 'next/link';
-import '../styles/Navbar.css';
+
+"use client";
+import Link from "next/link";
+import "../styles/Navbar.css";
 
 export default function Navbar() {
   return (
@@ -33,8 +35,9 @@ export default function Navbar() {
         <ul className="auth-links">
           <li><Link href="/login">Login</Link></li>
           <li><Link href="/register">Register</Link></li>
+          <li><Link href="/postproperty" className="post-btn">Post/drop Property</Link></li>
         </ul>
       </nav>
     </header>
   );
-}   // <-- this was missing
+}

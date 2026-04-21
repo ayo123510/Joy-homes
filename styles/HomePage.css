@@ -96,7 +96,7 @@ body::before {
 }
 
 .property-card {
-  height: 350px; /* Increase card height */
+  height: 400px; /* Increase card height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -176,3 +176,5 @@ footer {
   border-radius: 4px;
   font-size: 0.9rem;
 }
+
+

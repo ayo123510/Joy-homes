@@ -5,7 +5,7 @@ import supabase from "../lib/supabaseClient";
 import "../styles/HomePage.css";
 import Slider from "react-slick";
 
-// ✅ Import slick-carousel CSS
+//  Import slick-carousel CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
